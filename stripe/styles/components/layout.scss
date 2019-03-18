@@ -1,0 +1,12 @@
+body {
+    background: url("../images/bg-main.gif");
+    font: 16px/1.2 "Open Sans", Arial, sans-serif;
+    color: $dark-grey;
+
+}
+
+.main {
+    background: url("../images/bg-stripe.png") repeat-x;
+    background-position-y: 25px;
+    padding: 20px;
+}

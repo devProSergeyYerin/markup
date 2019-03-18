@@ -1,0 +1,46 @@
+.features {
+    max-width: $screen-width-lg;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 1.5;
+
+    &-icon {
+        min-height: 33px;
+    }
+
+    h1 {
+        font: bold 24px/1.2 "Bree Serif", "Times New Roman", serif;
+        margin: 0 0 5px;
+
+        span {
+            color: $green; 
+        }
+    }
+
+    p {
+        margin: 0 0 10px;
+    }
+
+    .link {
+        text-decoration: none;
+        background: $green;
+        color: $white;
+        padding: 0 5px 2px;
+    }
+
+    @media (max-width: $screen-width-md) {
+        flex-direction: column;
+        justify-content: center;
+        max-width: $content-widht-md;
+
+        &-article {
+            margin-bottom: 40px;
+        }
+    }
+
+    
+}

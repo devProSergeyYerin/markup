@@ -1,0 +1,92 @@
+.main-menu {
+    ul {
+        display: flex;
+        list-style: none;
+        font: normal 16px/1.2 "Bree Serif", "Times New Roman", serif;;
+    }
+
+    li {
+        text-transform: uppercase;
+        padding: 5px;
+        position: relative;
+        background: url("../images/menu.png");
+        background-repeat: no-repeat ;
+        background-position: 0 47% ;
+        padding-left: 10px;
+
+        &:first-child {
+            background: none;
+        }
+
+        &.active {
+            a {
+                color: $menu_item_active;
+
+                &:after {
+                    width: 0;
+                    height: 0;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-top: 7px solid $menu_item_active;
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    left: calc(50% - 3.5px);
+                }
+            }
+        }
+
+        a {
+            color: $menu_item;
+            text-decoration: none;
+
+            &:hover {
+                color: $middle-grey;
+            }
+        }
+    }
+
+    @media (max-width: $screen-width-sm) {
+        ul {
+            display: block;
+
+            li {
+                background: none;
+                padding-left: 0;
+
+                &.active {
+                    a {
+                        &:after {
+                            width: 100%;
+                            height: 2px;
+                            border: none;
+                            background-color: $menu_item_active;
+                            left: 0;
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+
+                    &:after {
+                        width: 100%;
+                        height: 2px;
+                        background-color: $menu_item;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+
+                    &:hover {
+                        &:after {
+                            background-color: $middle-grey;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

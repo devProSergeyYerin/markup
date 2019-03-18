@@ -1,0 +1,72 @@
+.content {
+    max-width: $screen-width-lg;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+    .text-area {
+        padding-top: 20px;
+        width: 45%;
+
+        h1 {
+            font: bold 24px/1.2 "Bree Serif", "Times New Roman", serif;
+            margin: 0 0 5px;
+            
+            span {
+                color: $green; 
+                background: $white;
+                margin: 0 0 5px;;
+                display: inline-block;
+            }
+        }
+    
+        p {
+            background: $white;
+            margin-bottom: 25px;
+            line-height: 1.5;
+    
+            a {
+                color: $green;
+            }
+        }
+
+        .text-row {
+            position: relative;
+
+            .link {
+                text-decoration: none;
+                background: $green;
+                color: $white;
+                padding: 0 5px 2px;
+                display: inline-block;
+                position: absolute;
+                right: -5px;
+                bottom: -5px;
+            }
+        }
+    }
+    
+    .video-frame {
+        align-self: center;
+        width: 49%;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: $screen-width-md) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        max-width: $content-widht-md;
+
+        .video-frame,
+        .text-area {
+            width: 100%;
+        }
+    }
+}

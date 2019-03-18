@@ -1,0 +1,42 @@
+.header {
+    min-height: $header_height_lg;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    display: flex;
+
+    &-content {
+        max-width: $screen-width-lg;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    @media (max-width: $screen-width-md) {
+        min-height: $header_height_md;
+
+        &-content {
+            min-height: $header_height_md;
+            max-width: $screen-width-md;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: $screen-width-sm) {
+        min-height: 35px;
+        background: none;
+
+        .logo {
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: -10px -10px 22px;
+            padding: 10px;
+        }
+
+        &-content {
+            max-width: $screen-width-sm;;
+            display: block;
+        }
+    }
+}
